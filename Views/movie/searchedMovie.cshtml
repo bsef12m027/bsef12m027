@@ -1,0 +1,24 @@
+﻿@model myMovieStore.Models.StoreMovy
+@{
+    
+}
+
+<div class="row">
+   
+    <div class="col-xs-12 col-md-8">
+    
+        <div class="row-xs-4 col-xs-3" style="">
+            <a href="watchingMovie/@Model.Id" class="thumbnail">
+                <img src="@Model.image" alt="Image can not be diplayed">
+                <div class="caption">
+                    <h5><b>@Model.MovieName</b></h5>
+                    <h5>Watch Full Movie</h5>
+                    <p>Actors:@Model.Actors</p>
+                </div>
+            </a>
+        </div>
+     </div>
+
+    
+    
+</div>

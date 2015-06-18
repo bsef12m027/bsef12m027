@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Bootstrap/bootstrap.css" />
+    <script src="~/Bootstrap/bootstrap.js"></script>
+    <title>UploadMovie</title>
+</head>
+<body style="background-image: url('../../Images/background.jpg');">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <img src="~/Images/movielinks.png" style="margin-top:10px;height:100px;width:150px" />
+        </div>
+        <div>
+            <ul class="nav navbar-nav" style=" font-size:xx-large ; color:antiquewhite ; font-style:italic ; font-stretch:expanded ; margin-top:30px ; margin-left:200px">
+                <li> Admin Panel </li>
+                <li class="btn btn-warning bgcolor" style="margin-left:420px"> <a href="AdminLogIn_SignUp" style="color: antiquewhite"> Log Out </a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row" style="margin-top:30px">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-xs-6" style="margin-left:100px">
+
+            <form method="post" action="~/Admin/UploadFiles" enctype="multipart/form-data" style="font-size:medium ; margin-top:40px ; margin-left:40px">
+                
+                Movie Name:        <input type="text" placeholder="Movie Name" name=m.MovieName style="margin-left:40px"> <br /> <br />
+                Released Year: <input type="text" placeholder="Year" name=m.Released_Year style="margin-left:25px"> <br /> <br />
+                Producer:          <input type="text" placeholder="Producer" name=m.Producer_Name style="margin-left:64px"> <br /> <br />
+                Genre:            <input type="text" placeholder="Genre" name=m.Genre style="margin-left:85px"> <br /> <br />
+                Actors:<input type="text" placeholder="Actors" name=m.actors style="margin-left:84px"> <br /> <br />
+               
+                Movie :<input type="file" name="n1" /> <br/> 
+                Image:<input type="file"  name="n2" /><br/>
+                <input type="submit" class="btn btn-warning bgcolor" value="Upload" style="margin-left:350px" />
+            </form>
+        </div>
+    </div>
+
+    <footer class="modal-footer" style="height:3% ; margin-top:9% ; background-color:black ; font-style:italic ; color:antiquewhite"> Made By AsmatAshu </footer>
+</body>
+</html>

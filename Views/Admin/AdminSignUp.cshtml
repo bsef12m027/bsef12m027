@@ -1,0 +1,56 @@
+﻿@model myMovieStore.Models.AdminSignUp
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Bootstrap/bootstrap.css" />
+    <script src="~/Bootstrap/bootstrap.js"></script>
+
+    <title>AdminSignUp</title>
+</head>
+<body style="background-image: url('../../Images/background.jpg');">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <img src="~/Images/movielinks.png" style="margin-top:10px;height:100px;width:150px" />
+        </div>
+        <div>
+            <ul class="nav navbar-nav" style=" font-size:xx-large ; color:antiquewhite ; font-style:italic ; font-stretch:expanded ; margin-top:30px ; margin-left:200px">
+                <li> Admin Panel </li>
+                <li class="btn btn-danger bgcolor" style="margin-left:420px"> <a href="AdminLogIn_SignUp" style="color: antiquewhite"> Log In </a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row" style="margin-top:30px">
+        <div class="col-md-6">
+         
+        </div>
+        <div class="col-xs-6" style="margin-left:350px">
+            @using (Html.BeginForm("SaveAdmin", "Admin", "Post"))
+            {
+                @Html.LabelFor(x => x.Name, new { style = "margin-left:53px" })
+                @Html.TextBoxFor(x => x.Name, new { style = "margin-left:53px" })<br />
+                @Html.LabelFor(x => x.Password, new { style = "margin-left:18px" })
+                @Html.PasswordFor(x => x.Password, new { style = "margin-left:18px" })<br />
+                @Html.LabelFor(x => x.Email_Id, new { style = "margin-left:53px" })
+                @Html.TextBoxFor(x => x.Email_Id, new { style = "margin-left:53px" })<br />
+                 <input type="submit" class="btn btn-danger bgcolor" value="SignUp" style="margin-left:250px" />
+            }
+            @*<form method="post" action="~/Admin/SaveAdmin" style="font-size:medium ; margin-top:40px ; margin-left:40px">
+                Name        : <input type="text" placeholder="Name" style="margin-left:53px" name=ad.Name> <br /> <br />
+                Email       : <input type="text" placeholder="Email" style="margin-left:53px" name=ad.Email_Id> <br /> <br />
+                Password    : <input type="password" placeholder="Password" style="margin-left:18px" name=ad.Password> <br /> <br />
+                <input type="submit" class="btn btn-danger bgcolor" value="SignUp" style="margin-left:250px" />
+            </form>*@
+        </div>
+    </div>
+
+    <footer class="modal-footer" style="height:3% ; margin-top:14% ; background-color:black ; font-style:italic ; color:antiquewhite"> Made By AsmatAshu </footer>
+</body>
+</html>

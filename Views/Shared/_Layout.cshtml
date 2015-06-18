@@ -1,0 +1,96 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+     
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <title>home</title>
+    <link rel="stylesheet" href="~/bootStrap/bootstrap.css" />
+    <script src="~/bootStrap/bootstrap.js"></script>
+    <script src="~/jsp/jquery-2.1.4.min.js"></script>
+    
+</head>
+
+<body style="background-image: url('../../Images/background.jpg');">
+    <nav class="navbar navbar-default" role="navigation" style="background-color:black">
+        <div class="navbar-header" style="height:150px">
+            <a class="navbarbrand" href="#">
+                <img alt="brand" src="~/images/movielinks.png" style="height:130px;width:250px" />
+            </a>
+            
+        </div>
+        <div>
+            <form method="post" action="~/movie/UserLogin">
+                <button class="btn btn-danger pull-right" style="margin-top:20px;margin-right:20px">login</button>
+            </form>
+
+            <form method="post" action="~/movie/UserSignUp">
+                <button class="btn btn-danger pull-right" style="margin-top:20px;margin-right:5px">sign Up</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default" role="navigation" style="background-color:darkslategrey">
+        <<div class="navbar-header">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="home" style="color:white;background-color:black">Home</a></li>
+                <li role="presentation" class="dropdown" style="margin-left:2px"><a class="dropdown-toggle" data-toggle="dropdown" href="hollywood" role="button" aria-expanded="false" style="color:white;background-color:black" >HOLLYWOOD<span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                          <li><a href="~/movie/getmovie?year=2015&h=hollywood">2015</a></li>
+                          <li><a href="~/movie/getmovie?year=2014&h=hollywood"">2014</a></li>
+                          <li><a href="~/movie/getmovie?year=2013&h=hollywood"">2013</a></li>
+                          <li><a href="~/movie/getmovie?year=2012&h=hollywood"">2012</a></li>
+                          <li><a href="~/movie/getmovie?year=2011&h=hollywood"">2011</a></li>
+                          <li><a href="~/movie/getmovie?year=2010&h=hollywood"">2010</a></li>
+                          <li><a href="~/movie/getmovie?year=2009&h=hollywood"">1965-2009</a></li>
+                      </ul>      
+                </li>
+                <li role="presentation" class="dropdown" style="margin-left:2px"><a class="dropdown-toggle" data-toggle="dropdown" href="bollywood" role="button" aria-expanded="false" style="color:white;background-color:black">BOLLYWOOD<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                          <li><a href="~/movie/getmovie?year=2015&h=bollywood">2015</a></li>
+                          <li><a href="~/movie/getmovie?year=2014&h=bollywood">2014</a></li>
+                          <li><a href="~/movie/getmovie?year=2013&h=bollywood">2013</a></li>
+                          <li><a href="~/movie/getmovie?year=2012&h=bollywood">2012</a></li>
+                          <li><a href="~/movie/getmovie?year=2012&h=bollywood">2012</a></li>
+                          <li><a href="~/movie/getmovie?year=2011&h=bollywood">2011</a></li>
+                          <li><a href="~/movie/getmovie?year=2010&h=bollywood">2010</a></li>
+                          <li><a href="~/movie/getmovie?year=2009&h=bollywood">1965-2009</a></li>
+                      </ul>  
+                </li>
+                <li role="presentation" class="dropdown" style="margin-left:2px"><a class="dropdown-toggle" data-toggle="dropdown" href="lollywood" role="button" aria-expanded="false" style="color:white;background-color:black">LOLLYWOOD<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                          <li><a href="~/movie/getmovie?year=2015&h=lollywood">2015</a></li>
+                          <li><a href="~/movie/getmovie?year=2014&h=lollywood">2014</a></li>
+                          <li><a href="~/movie/getmovie?year=2013&h=lollywood">2013</a></li>
+                          <li><a href="~/movie/getmovie?year=2012&h=lollywood">2012</a></li>
+                          <li><a href="~/movie/getmovie?year=2011&h=lollywood">2011</a></li>
+                          <li><a href="~/movie/getmovie?year=2010&h=lollywood">2010</a></li>
+                          <li><a href="~/movie/getmovie?year=2009&h=lollywood">1965-2009</a></li>
+                      </ul>  
+                </li>
+            </ul>
+        </div>
+        <form class="navbar-form navbar-left pull-right" action="~/movie/searchedMovie" method="post" >
+            <div class="form-group">
+                <input id="searchMovie" type="text" class="form-control" placeholder="Movie Name" name="searchName" />
+            </div>
+            <button id="b1" type="submit" class="btn btn-danger">search</button>
+        </form>
+        
+    </nav>
+    <div></div>
+    
+    
+
+    <div id="d1">
+        @RenderBody();
+    </div>
+    <footer class="modal-footer" style="background-color:black;color:white">copy Rights to AsmatAshu</footer>
+</body>
+</html>
